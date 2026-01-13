@@ -84,8 +84,8 @@ export default function Hero() {
           variants={headlineVariants}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <span className="bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
-            AI Full-Stack Developer
+          <span className="bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
+            Sphesihle Mlanzi AI Full-Stack Developer
           </span>
         </motion.h1>
 
