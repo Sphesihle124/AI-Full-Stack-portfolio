@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -26,26 +27,41 @@ const projects = [
   {
     name: "AI Code Assistant",
     problem: "Developers struggle with code quality and debugging efficiency.",
-    solution: "AI-powered IDE extension that provides real-time code suggestions, error detection, and automated refactoring.",
+    solution:
+      "AI-powered IDE extension that provides real-time code suggestions, error detection, and automated refactoring.",
     tech: ["Next.js", "TypeScript", "OpenAI API", "Tailwind CSS", "Vercel"],
+    image: "/projects/project-1.png",
   },
   {
     name: "Intelligent Analytics Platform",
     problem: "Businesses need actionable insights from complex data streams.",
-    solution: "Real-time dashboard with AI-driven pattern recognition, predictive analytics, and automated reporting.",
-    tech: ["Next.js", "TypeScript", "Python", "TensorFlow", "PostgreSQL", "Vercel"],
+    solution:
+      "Real-time dashboard with AI-driven pattern recognition, predictive analytics, and automated reporting.",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Python",
+      "TensorFlow",
+      "PostgreSQL",
+      "Vercel",
+    ],
+    image: "/projects/project-2.png",
   },
   {
     name: "Smart Content Generator",
     problem: "Content creators face writer's block and time-consuming research.",
-    solution: "AI-powered platform that generates, optimizes, and personalizes content across multiple formats and channels.",
+    solution:
+      "AI-powered platform that generates, optimizes, and personalizes content across multiple formats and channels.",
     tech: ["Next.js", "TypeScript", "GPT-4 API", "Tailwind CSS", "Vercel"],
+    image: "/projects/project-3.png",
   },
   {
     name: "Automated Testing Suite",
     problem: "Manual testing is time-intensive and prone to human error.",
-    solution: "AI-driven testing framework that generates test cases, identifies edge cases, and provides comprehensive coverage reports.",
+    solution:
+      "AI-driven testing framework that generates test cases, identifies edge cases, and provides comprehensive coverage reports.",
     tech: ["Next.js", "TypeScript", "Jest", "Playwright", "AI APIs", "Vercel"],
+    image: "/projects/project-4.png",
   },
 ];
 
@@ -93,6 +109,19 @@ export default function Projects() {
             >
               {/* Subtle glow effect on hover */}
               <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              
+              {/* Optional Project Image */}
+              {project.image && (
+                <div className="relative mb-6 w-full h-48 rounded-lg overflow-hidden border border-gray-800/50 group-hover:border-gray-700/70 transition-all duration-300">
+                  <Image
+                    src={project.image}
+                    alt={`${project.name} project screenshot`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
+              )}
               
               {/* Project Title - More Prominent */}
               <h3 className="relative text-2xl font-bold text-white mb-5 leading-tight group-hover:text-gray-50 transition-colors duration-300">
