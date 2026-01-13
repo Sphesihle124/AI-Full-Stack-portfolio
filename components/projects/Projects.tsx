@@ -112,12 +112,12 @@ export default function Projects() {
               
               {/* Optional Project Image */}
               {project.image && (
-                <div className="relative mb-6 w-full h-48 rounded-lg overflow-hidden border border-gray-800/50 group-hover:border-gray-700/70 transition-all duration-300">
+                <div className="relative mb-6 w-full h-48 sm:h-56 lg:h-64 overflow-hidden rounded-2xl border border-gray-800/60 bg-gray-900/60 shadow-md shadow-black/40 group-hover:border-gray-700/70 group-hover:shadow-xl group-hover:shadow-black/40 transition-all duration-500">
                   <Image
                     src={project.image}
                     alt={`${project.name} project screenshot`}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="object-cover w-full h-full transform transition-transform duration-500 ease-out group-hover:scale-[1.04]"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>

@@ -13,26 +13,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://initial-ai-full-stack-portfolio.vercel.app"),
   title: {
-    default: "AI Full-Stack Developer Portfolio | Next.js, TypeScript, AI Systems",
+    default: "AI Full-Stack Developer | Next.js, TypeScript, AI Systems",
     template: "%s | AI Full-Stack Developer",
   },
   description:
-    "AI-focused Full-Stack Developer building production-grade web and mobile applications with Next.js, TypeScript, Tailwind CSS, and AI-powered backends.",
+    "AI-focused full-stack developer delivering production-ready web and mobile platforms using Next.js, TypeScript, Tailwind CSS, and modern AI APIs.",
   openGraph: {
-    title: "AI Full-Stack Developer Portfolio | Next.js, TypeScript, AI Systems",
+    title: "AI Full-Stack Developer Portfolio",
     description:
-      "Discover production-ready AI-powered web and mobile projects built with Next.js, TypeScript, Tailwind CSS, and modern cloud infrastructure.",
-    url: "https://initial-ai-full-stack-portfolio.vercel.app",
+      "Explore real AI-powered full-stack projects: intelligent dashboards, content tools, and automation built with Next.js, TypeScript, and cloud-native services.",
+    url: "/",
     siteName: "AI Full-Stack Developer Portfolio",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Full-Stack Developer Portfolio | Next.js, TypeScript, AI Systems",
+    title: "AI Full-Stack Developer Portfolio",
     description:
-      "AI-driven full-stack engineer delivering modern, scalable web and mobile solutions for product teams and recruiters.",
+      "Portfolio showcasing AI-driven, production-grade web and mobile applications for modern product teams and recruiters.",
   },
 };
 
