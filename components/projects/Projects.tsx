@@ -125,6 +125,8 @@ export default function Projects() {
                     fill
                     className="object-cover w-full h-full transform transition-transform duration-500 ease-out group-hover:scale-[1.04]"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    loading="lazy"
+                    quality={90}
                   />
                 </div>
               )}
