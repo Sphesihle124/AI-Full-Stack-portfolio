@@ -67,8 +67,14 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative py-24 px-4 sm:px-6 lg:px-8 bg-[#0a0a0a]">
-      <div className="max-w-6xl mx-auto">
+    <section id="projects" className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a] overflow-hidden">
+      {/* Subtle background enhancement */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-purple-500/[0.03] rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-blue-500/[0.02] rounded-full blur-3xl" />
+      </div>
+
+      <div className="relative max-w-6xl mx-auto">
         <motion.div
           className="text-center mb-16"
           variants={containerVariants}
