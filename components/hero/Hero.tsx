@@ -90,13 +90,13 @@ export default function Hero() {
             variants={headlineVariants}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-[1.15] tracking-tight mb-2">
+            <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-gradient-to-r from-white via-indigo-200 to-cyan-200 bg-clip-text text-transparent leading-[1.15] tracking-tight mb-2">
               Sphesihle Mlanzi
             </span>
-            <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-gradient-to-r from-gray-200 to-gray-400 bg-clip-text text-transparent leading-[1.15] tracking-tight mb-2">
+            <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-gradient-to-r from-cyan-300 via-blue-300 to-violet-300 bg-clip-text text-transparent leading-[1.15] tracking-tight mb-2">
               AI & Full Stack
             </span>
-            <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-gray-300 leading-[1.15] tracking-tight">
+            <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-gradient-to-r from-violet-200 via-purple-200 to-indigo-200 bg-clip-text text-transparent leading-[1.15] tracking-tight">
               Developer
             </span>
           </motion.h1>
