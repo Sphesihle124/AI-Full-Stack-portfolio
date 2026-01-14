@@ -62,7 +62,7 @@ const projects = [
     solution:
       "UniConnect simplifies the process by centralising student data and intelligently guiding and automating applications across multiple universities from a single platform.",
     tech: ["Flutter", "Dart", "TypeScript", "Node.js", "Playwright", "RESTful APIs", "GitHub", "Supabase", "Web Scraping", "Inngest", "PayFast", "PostgreSQL"],
-    image: "/projects/Uniconnect.png",
+    image: "/projects/crossplatform.png",
   },
 ];
 
