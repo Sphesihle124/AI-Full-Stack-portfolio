@@ -29,7 +29,7 @@ const projects = [
     problem: "Developers struggle with code quality and debugging efficiency.",
     solution:
       "AI-powered IDE extension that provides real-time code suggestions, error detection, and automated refactoring.",
-    tech: ["Next.js", "TypeScript", "OpenAI API", "Tailwind CSS", "Vercel"],
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Stripe", "Lucide React"],
     image: "/projects/project-1.png",
   },
   {
@@ -40,10 +40,11 @@ const projects = [
     tech: [
       "Next.js",
       "TypeScript",
-      "Python",
-      "TensorFlow",
-      "PostgreSQL",
-      "Vercel",
+      "Tailwind CSS",
+      "OpenAI",
+      "DeepSeek APIs",
+      "Paypal",
+      "Firebase"
     ],
     image: "/projects/project-2.png",
   },
@@ -52,15 +53,15 @@ const projects = [
     problem: "Content creators face writer's block and time-consuming research.",
     solution:
       "AI-powered platform that generates, optimizes, and personalizes content across multiple formats and channels.",
-    tech: ["Next.js", "TypeScript", "GPT-4 API", "Tailwind CSS", "Vercel"],
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Shadcn/UI", "Framer Motion", "OpenAI API"],
     image: "/projects/project-4.png",
   },
   {
     name: "Uniconnect Crossplatform App",
-    problem: "Manual testing is time-intensive and prone to human error.",
+    problem: "South African university applications are fragmented and repetitive, requiring students to navigate multiple portals, re-enter the same information, and manage complex, inconsistent requirements.",
     solution:
-      "AI-driven testing framework that generates test cases, identifies edge cases, and provides comprehensive coverage reports.",
-    tech: ["Next.js", "TypeScript", "Jest", "Playwright", "AI APIs", "Vercel"],
+      "UniConnect simplifies the process by centralising student data and intelligently guiding and automating applications across multiple universities from a single platform.",
+    tech: ["Flutter", "Dart", "TypeScript", "Node.js", "Playwright", "RESTful APIs", "GitHub", "Supabase", "Web Scraping", "Inngest", "PayFast", "PostgreSQL"],
     image: "/projects/project-3.png",
   },
 ];

@@ -196,8 +196,8 @@ export default function About() {
               "Docker",
               "Git",
               "Vercel",
-              "TensorFlow",
-              "Jest",
+              "Supabase",
+              "Inngest",
               "Playwright",
             ].map((tech) => (
               <motion.span
