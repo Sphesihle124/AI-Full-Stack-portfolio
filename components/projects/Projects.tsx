@@ -25,7 +25,7 @@ const itemVariants = {
 
 const projects = [
   {
-    name: "AI Code Assistant",
+    name: "ClothingDrop E-commerce Platform",
     problem: "Developers struggle with code quality and debugging efficiency.",
     solution:
       "AI-powered IDE extension that provides real-time code suggestions, error detection, and automated refactoring.",
@@ -33,7 +33,7 @@ const projects = [
     image: "/projects/project-1.png",
   },
   {
-    name: "Intelligent Analytics Platform",
+    name: "CareerDash Web App",
     problem: "Businesses need actionable insights from complex data streams.",
     solution:
       "Real-time dashboard with AI-driven pattern recognition, predictive analytics, and automated reporting.",
@@ -48,20 +48,20 @@ const projects = [
     image: "/projects/project-2.png",
   },
   {
-    name: "Smart Content Generator",
+    name: "AI Developer Portfolio Website",
     problem: "Content creators face writer's block and time-consuming research.",
     solution:
       "AI-powered platform that generates, optimizes, and personalizes content across multiple formats and channels.",
     tech: ["Next.js", "TypeScript", "GPT-4 API", "Tailwind CSS", "Vercel"],
-    image: "/projects/project-3.png",
+    image: "/projects/project-4.png",
   },
   {
-    name: "Automated Testing Suite",
+    name: "Uniconnect Crossplatform App",
     problem: "Manual testing is time-intensive and prone to human error.",
     solution:
       "AI-driven testing framework that generates test cases, identifies edge cases, and provides comprehensive coverage reports.",
     tech: ["Next.js", "TypeScript", "Jest", "Playwright", "AI APIs", "Vercel"],
-    image: "/projects/project-4.png",
+    image: "/projects/project-3.png",
   },
 ];
 
