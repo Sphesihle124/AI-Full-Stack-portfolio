@@ -69,7 +69,7 @@ export default function Footer() {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/sphesihle-mlanzi-2844a4287"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-white transition-colors"
@@ -78,7 +78,7 @@ export default function Footer() {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="mailto:contact@example.com"
+                href="mailto:sphesihlemlanzi59@gmail.com"
                 className="text-gray-500 hover:text-white transition-colors"
                 aria-label="Email"
               >
