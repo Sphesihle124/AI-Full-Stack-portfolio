@@ -66,14 +66,11 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-t from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a] overflow-hidden">
-      {/* Subtle background enhancement */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/3 left-1/3 w-[500px] h-[500px] bg-blue-500/[0.025] rounded-full blur-3xl" />
-        <div className="absolute bottom-1/3 right-1/3 w-[500px] h-[500px] bg-purple-500/[0.025] rounded-full blur-3xl" />
-      </div>
-
-      <div className="relative max-w-4xl mx-auto">
+    <section
+      id="contact"
+      className="relative py-24 px-4 sm:px-6 lg:px-8 bg-[#0a0a0a]"
+    >
+      <div className="max-w-4xl mx-auto">
         <motion.div
           className="text-center mb-16"
           variants={containerVariants}
@@ -106,7 +103,10 @@ export default function Contact() {
             viewport={{ once: true, margin: "-50px" }}
           >
             <form onSubmit={handleSubmit} className="space-y-6">
-              <motion.div variants={itemVariants} transition={{ duration: 0.5, ease: "easeOut" }}>
+              <motion.div
+                variants={itemVariants}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+              >
                 <label
                   htmlFor="name"
                   className="block text-sm font-semibold text-gray-300 mb-2.5"
@@ -125,7 +125,10 @@ export default function Contact() {
                 />
               </motion.div>
 
-              <motion.div variants={itemVariants} transition={{ duration: 0.5, ease: "easeOut" }}>
+              <motion.div
+                variants={itemVariants}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+              >
                 <label
                   htmlFor="email"
                   className="block text-sm font-semibold text-gray-300 mb-2.5"
@@ -144,7 +147,10 @@ export default function Contact() {
                 />
               </motion.div>
 
-              <motion.div variants={itemVariants} transition={{ duration: 0.5, ease: "easeOut" }}>
+              <motion.div
+                variants={itemVariants}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+              >
                 <label
                   htmlFor="message"
                   className="block text-sm font-semibold text-gray-300 mb-2.5"
@@ -163,12 +169,13 @@ export default function Contact() {
                 />
               </motion.div>
 
-              <motion.div variants={itemVariants} transition={{ duration: 0.5, ease: "easeOut" }}>
+              <motion.div
+                variants={itemVariants}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+              >
                 <motion.button
                   type="submit"
-                  className="w-full px-6 py-3.5 bg-white text-[#0a0a0a] rounded-xl font-semibold text-base flex items-center justify-center gap-2.5 hover:bg-gray-100 hover:shadow-lg hover:shadow-white/20 transition-all duration-300"
-                  whileHover={{ scale: 1.02, y: -1 }}
-                  whileTap={{ scale: 0.98 }}
+                  className="w-full px-6 py-3.5 bg-white text-[#0a0a0a] rounded-xl font-semibold text-base flex items-center justify-center gap-2.5 hover:bg-gray-100 transition-colors duration-200"
                 >
                   <Send className="w-5 h-5" />
                   Send
@@ -192,7 +199,7 @@ export default function Contact() {
             >
               Connect with me
             </motion.h3>
-            <div className="space-y-4">
+            <div className="space-y-3">
               {socialLinks.map((link, index) => {
                 const Icon = link.icon;
                 return (
@@ -201,18 +208,14 @@ export default function Contact() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group relative flex items-center gap-4 p-5 rounded-xl border border-gray-800/50 bg-gradient-to-br from-gray-900/30 to-gray-950/30 hover:border-gray-700/70 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300"
+                    className="group flex items-center gap-4 p-4 rounded-lg border border-gray-800 bg-[#101010] hover:border-gray-600 hover:bg-gray-900 transition-colors duration-200"
                     variants={itemVariants}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
-                    whileHover={{ x: 6, scale: 1.02 }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
                   >
-                    {/* Subtle glow effect on hover */}
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-                    
-                    <div className="relative flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/20 group-hover:border-blue-500/40 group-hover:bg-gradient-to-br group-hover:from-blue-500/15 group-hover:to-purple-500/15 transition-all duration-300">
-                      <Icon className="w-6 h-6 text-blue-400 group-hover:text-blue-300 transition-colors duration-300" />
+                    <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-gray-900 border border-gray-700">
+                      <Icon className="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-200" />
                     </div>
-                    <span className="relative text-base font-medium text-gray-300 group-hover:text-white transition-colors duration-300">
+                    <span className="text-base font-medium text-gray-300 group-hover:text-white transition-colors duration-200">
                       {link.label}
                     </span>
                   </motion.a>
