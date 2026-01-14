@@ -111,7 +111,7 @@ export default function About() {
               Sphesihle Mlanzi
             </h3>
             <p className="text-lg text-gray-400 leading-relaxed mb-4">
-              AI & Full-Stack Developer based in Johannesburg, South Africa specializing in building intelligent, scalable web and mobile applications.
+              AI & Full-Stack Developer based in Johannesburg South Africa, specializing in building intelligent, scalable web and mobile applications.
             </p>
             <p className="text-base text-gray-500 leading-relaxed mb-4">
               I leverage modern technologies like Next.js, TypeScript, and AI APIs to create production-ready solutions
