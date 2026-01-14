@@ -137,21 +137,40 @@ export default function Projects() {
                 {project.name}
               </h3>
               
-              {/* Problem & Solution */}
-              <div className="relative mb-6 space-y-3 flex-grow">
-                <div>
-                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Problem</p>
-                  <p className="text-sm text-gray-400 leading-relaxed">
-                    {project.problem}
+              {/* Problem / Solution or Description */}
+              {project.name === "AI Developer Portfolio Website" ? (
+                <div className="relative mb-6 flex-grow">
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
+                    Description
                   </p>
-                </div>
-                <div>
-                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Solution</p>
                   <p className="text-sm text-gray-300 leading-relaxed">
-                    {project.solution}
+                  A modern, high-performance portfolio designed to showcase real-world AI and full-stack development 
+                  skills through live projects, interactive AI demos, and a clean, recruiter-focused user experience. 
+                  Built with a strong emphasis on performance, accessibility, and modern UI/UX, the platform demonstrates end-to-end engineering — from frontend design and animations 
+                  to backend logic and AI integration — all deployed as a production-ready web application. 
+                  The portfolio also highlights an AI-assisted development workflow, demonstrating how modern tools can accelerate delivery without compromising code quality.
                   </p>
                 </div>
-              </div>
+              ) : (
+                <div className="relative mb-6 space-y-3 flex-grow">
+                  <div>
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
+                      Problem
+                    </p>
+                    <p className="text-sm text-gray-400 leading-relaxed">
+                      {project.problem}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
+                      Solution
+                    </p>
+                    <p className="text-sm text-gray-300 leading-relaxed">
+                      {project.solution}
+                    </p>
+                  </div>
+                </div>
+              )}
 
               {/* Tech Stack */}
               <div className="relative mb-6">
