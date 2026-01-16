@@ -27,17 +27,17 @@ const socialLinks = [
   {
     icon: Linkedin,
     label: "LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/sphesihle-mlanzi-2844a4287",
   },
   {
     icon: Github,
     label: "GitHub",
-    href: "https://github.com",
+    href: "https://github.com/Sphesihle124",
   },
   {
     icon: Mail,
     label: "Email",
-    href: "mailto:contact@example.com",
+    href: "mailto:sphesihlemlanzi59@gmail.com",
   },
 ];
 

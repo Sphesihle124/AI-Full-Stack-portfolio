@@ -69,7 +69,7 @@ export default function Footer() {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BgyCopu1bRZeM8GrGFrS4FQ%3D%3D"
+                href="https://www.linkedin.com/in/sphesihle-mlanzi-2844a4287"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-white transition-colors"
