@@ -31,6 +31,8 @@ const projects = [
       "AI-powered IDE extension that provides real-time code suggestions, error detection, and automated refactoring.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Stripe", "Lucide React"],
     image: "/projects/project-1.png",
+    liveDemo: "https://clothingdrop.vercel.app", // Update with your actual URL
+    github: "https://github.com/Sphesihle124/clothingdrop", // Update with your actual URL
   },
   {
     name: "CareerDash Web App",
@@ -47,6 +49,8 @@ const projects = [
       "Firebase"
     ],
     image: "/projects/project-2.png",
+    liveDemo: "https://youtu.be/rU24vpS9n0w", // Update with your actual URL
+    github: "https://github.com/Sphesihle124/careerdash", // Update with your actual URL
   },
   {
     name: "AI Developer Portfolio Website",
@@ -55,6 +59,8 @@ const projects = [
       "AI-powered platform that generates, optimizes, and personalizes content across multiple formats and channels.",
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Shadcn/UI", "Framer Motion", "OpenAI API"],
     image: "/projects/project-4.png",
+    liveDemo: "https://initial-ai-full-stack-portfolio.vercel.app", // Current portfolio URL
+    github: "https://github.com/Sphesihle124/Initial-AI-Full-Stack-portfolio", // Current portfolio repo
   },
   {
     name: "Uniconnect Crossplatform App",
@@ -63,6 +69,8 @@ const projects = [
       "UniConnect simplifies the process by centralising student data and intelligently guiding and automating applications across multiple universities from a single platform.",
     tech: ["Flutter", "Dart", "TypeScript", "Node.js", "Playwright", "RESTful APIs", "GitHub", "Supabase", "Web Scraping", "Inngest", "PayFast", "PostgreSQL"],
     image: "/projects/crossplatform.png",
+    liveDemo: "https://uniconnect.app", // Update with your actual URL
+    github: "https://github.com/Sphesihle124/uniconnect", // Update with your actual URL
   },
 ];
 
@@ -189,24 +197,32 @@ export default function Projects() {
 
               {/* Action Buttons */}
               <div className="relative flex gap-3 mt-auto">
-                <motion.a
-                  href="#"
-                  className="group/btn flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-gray-700/50 rounded-xl transition-all duration-300 hover:border-gray-600/50 hover:shadow-md hover:shadow-white/10"
-                  whileHover={{ scale: 1.03, y: -1 }}
-                  whileTap={{ scale: 0.97 }}
-                >
-                  <ExternalLink className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-0.5" />
-                  Live Demo
-                </motion.a>
-                <motion.a
-                  href="#"
-                  className="group/btn flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-gray-300 bg-gray-900/50 hover:bg-gray-800/60 border border-gray-700/50 rounded-xl transition-all duration-300 hover:border-gray-600/50 hover:shadow-md hover:shadow-gray-900/50"
-                  whileHover={{ scale: 1.03, y: -1 }}
-                  whileTap={{ scale: 0.97 }}
-                >
-                  <Github className="w-4 h-4 transition-transform duration-300 group-hover/btn:scale-110" />
-                  GitHub
-                </motion.a>
+                {project.liveDemo && (
+                  <motion.a
+                    href={project.liveDemo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/btn flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-gray-700/50 rounded-xl transition-all duration-300 hover:border-gray-600/50 hover:shadow-md hover:shadow-white/10"
+                    whileHover={{ scale: 1.03, y: -1 }}
+                    whileTap={{ scale: 0.97 }}
+                  >
+                    <ExternalLink className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-0.5" />
+                    Live Demo
+                  </motion.a>
+                )}
+                {project.github && (
+                  <motion.a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/btn flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-gray-300 bg-gray-900/50 hover:bg-gray-800/60 border border-gray-700/50 rounded-xl transition-all duration-300 hover:border-gray-600/50 hover:shadow-md hover:shadow-gray-900/50"
+                    whileHover={{ scale: 1.03, y: -1 }}
+                    whileTap={{ scale: 0.97 }}
+                  >
+                    <Github className="w-4 h-4 transition-transform duration-300 group-hover/btn:scale-110" />
+                    GitHub
+                  </motion.a>
+                )}
               </div>
             </motion.div>
           ))}
