@@ -32,8 +32,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+27 81 234 5678", // Update with your actual phone number
-    href: "tel:+27812345678", // Update with your actual phone number
+    value: "073 563 4524", // Update with your actual phone number
+    href: "tel:0735634524", // Update with your actual phone number
   },
 ];
 
