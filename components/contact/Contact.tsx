@@ -1,27 +1,41 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Github, Linkedin, Send } from "lucide-react";
-import { useState } from "react";
+import { Mail, Github, Linkedin, Phone } from "lucide-react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15,
+      staggerChildren: 0.1,
       delayChildren: 0.1,
     },
   },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
   },
 };
+
+const contactInfo = [
+  {
+    icon: Mail,
+    label: "Email",
+    value: "sphesihlemlanzi59@gmail.com",
+    href: "mailto:sphesihlemlanzi59@gmail.com",
+  },
+  {
+    icon: Phone,
+    label: "Phone",
+    value: "+27 81 234 5678", // Update with your actual phone number
+    href: "tel:+27812345678", // Update with your actual phone number
+  },
+];
 
 const socialLinks = [
   {
@@ -34,196 +48,110 @@ const socialLinks = [
     label: "GitHub",
     href: "https://github.com/Sphesihle124",
   },
-  {
-    icon: Mail,
-    label: "Email",
-    href: "mailto:sphesihlemlanzi59@gmail.com",
-  },
 ];
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Placeholder - no backend needed
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message! (This is a placeholder - form submission not implemented)");
-    setFormData({ name: "", email: "", message: "" });
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
   return (
     <section
       id="contact"
-      className="relative py-24 px-4 sm:px-6 lg:px-8 bg-[#0a0a0a]"
+      className="relative py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[#0a0a0a]"
     >
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-3xl lg:max-w-4xl mx-auto">
+        {/* Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-12 lg:mb-16"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
           <motion.h2
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4"
             variants={itemVariants}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            Contact Me
+            Get In Touch
           </motion.h2>
           <motion.p
-            className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed"
+            className="text-sm sm:text-base lg:text-lg text-gray-400 max-w-md sm:max-w-xl mx-auto leading-relaxed px-2"
             variants={itemVariants}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            Let's collaborate on your next AI-powered project
+            Ready to collaborate on your next AI-powered project? Let's connect.
           </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
+        {/* Contact Grid */}
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-10 lg:mb-12"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
+          {contactInfo.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <motion.a
+                key={index}
+                href={item.href}
+                className="group flex items-center gap-3 sm:gap-4 p-4 sm:p-5 lg:p-6 rounded-xl sm:rounded-2xl border border-gray-800 bg-[#0d0d0d] hover:border-gray-700 hover:bg-[#111111] transition-all duration-300"
+                variants={itemVariants}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+              >
+                <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-lg sm:rounded-xl bg-gray-900/80 border border-gray-800 group-hover:border-gray-700 transition-all duration-300 flex-shrink-0">
+                  <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-gray-400 group-hover:text-white transition-colors duration-300" />
+                </div>
+                <div className="flex flex-col min-w-0">
+                  <span className="text-xs font-medium text-gray-500 uppercase tracking-wider mb-0.5 sm:mb-1">
+                    {item.label}
+                  </span>
+                  <span className="text-sm sm:text-base font-medium text-gray-200 group-hover:text-white transition-colors duration-300 truncate">
+                    {item.value}
+                  </span>
+                </div>
+              </motion.a>
+            );
+          })}
+        </motion.div>
+
+        {/* Social Links */}
+        <motion.div
+          className="flex flex-col items-center"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
+          <motion.p
+            className="text-xs sm:text-sm text-gray-500 mb-4 sm:mb-5"
+            variants={itemVariants}
+            transition={{ duration: 0.4, ease: "easeOut" }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <motion.div
-                variants={itemVariants}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-              >
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-semibold text-gray-300 mb-2.5"
-                >
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-5 py-3.5 bg-gray-900/60 border border-gray-800/50 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 focus:bg-gray-900/80 hover:border-gray-700/50 transition-all duration-300"
-                  placeholder="Your name"
-                />
-              </motion.div>
-
-              <motion.div
-                variants={itemVariants}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-              >
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-semibold text-gray-300 mb-2.5"
-                >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-5 py-3.5 bg-gray-900/60 border border-gray-800/50 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 focus:bg-gray-900/80 hover:border-gray-700/50 transition-all duration-300"
-                  placeholder="your.email@example.com"
-                />
-              </motion.div>
-
-              <motion.div
-                variants={itemVariants}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-              >
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-semibold text-gray-300 mb-2.5"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={6}
-                  className="w-full px-5 py-3.5 bg-gray-900/60 border border-gray-800/50 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 focus:bg-gray-900/80 hover:border-gray-700/50 transition-all duration-300 resize-none"
-                  placeholder="Tell me about your project..."
-                />
-              </motion.div>
-
-              <motion.div
-                variants={itemVariants}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-              >
-                <motion.button
-                  type="submit"
-                  className="w-full px-6 py-3.5 bg-white text-[#0a0a0a] rounded-xl font-semibold text-base flex items-center justify-center gap-2.5 hover:bg-gray-100 transition-colors duration-200"
-                >
-                  <Send className="w-5 h-5" />
-                  Send
-                </motion.button>
-              </motion.div>
-            </form>
-          </motion.div>
-
-          {/* Social Links */}
+            Follow me on
+          </motion.p>
           <motion.div
-            className="flex flex-col justify-center"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
+            className="flex gap-3 sm:gap-4"
+            variants={itemVariants}
+            transition={{ duration: 0.4, ease: "easeOut" }}
           >
-            <motion.h3
-              className="text-xl font-semibold text-white mb-8"
-              variants={itemVariants}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-            >
-              Connect with me
-            </motion.h3>
-            <div className="space-y-3">
-              {socialLinks.map((link, index) => {
-                const Icon = link.icon;
-                return (
-                  <motion.a
-                    key={index}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-center gap-4 p-4 rounded-lg border border-gray-800 bg-[#101010] hover:border-gray-600 hover:bg-gray-900 transition-colors duration-200"
-                    variants={itemVariants}
-                    transition={{ duration: 0.4, ease: "easeOut" }}
-                  >
-                    <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-gray-900 border border-gray-700">
-                      <Icon className="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-200" />
-                    </div>
-                    <span className="text-base font-medium text-gray-300 group-hover:text-white transition-colors duration-200">
-                      {link.label}
-                    </span>
-                  </motion.a>
-                );
-              })}
-            </div>
+            {socialLinks.map((link, index) => {
+              const Icon = link.icon;
+              return (
+                <a
+                  key={index}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl border border-gray-800 bg-[#0d0d0d] hover:border-gray-600 hover:bg-[#111111] transition-all duration-300"
+                  aria-label={link.label}
+                >
+                  <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-gray-400 group-hover:text-white group-hover:scale-110 transition-all duration-300" />
+                </a>
+              );
+            })}
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -56,7 +56,7 @@ const features = [
 
 export default function About() {
   return (
-    <section id="about" className="relative py-24 px-4 sm:px-6 lg:px-8 bg-[#0a0a0a] overflow-hidden">
+    <section id="about" className="relative py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[#0a0a0a] overflow-hidden">
       {/* Subtle background enhancement */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-blue-500/[0.03] rounded-full blur-3xl" />
@@ -66,20 +66,20 @@ export default function About() {
       <div className="relative max-w-6xl mx-auto">
         {/* Section Title */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-12 lg:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             About Me
           </h2>
         </motion.div>
 
         {/* Profile Section with Photo and Bio */}
         <motion.div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 mb-12 sm:mb-16 lg:mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -87,7 +87,7 @@ export default function About() {
         >
           {/* Profile Photo */}
           <div className="flex justify-center lg:justify-end">
-            <div className="relative w-64 h-64 sm:w-80 sm:h-80">
+            <div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80">
               {/* Profile Photo */}
               <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-gray-800/50 bg-gradient-to-br from-gray-900/50 to-gray-950/50">
                 <Image
@@ -106,19 +106,19 @@ export default function About() {
           </div>
 
           {/* Professional Bio */}
-          <div className="flex flex-col justify-center">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+          <div className="flex flex-col justify-center text-center lg:text-left">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6">
               Sphesihle Mlanzi
             </h3>
-            <p className="text-lg text-gray-400 leading-relaxed mb-4">
+            <p className="text-base sm:text-lg text-gray-400 leading-relaxed mb-3 sm:mb-4">
               AI & Full-Stack Developer based in Johannesburg South Africa, specializing in building intelligent, scalable web and mobile applications.
             </p>
-            <p className="text-base text-gray-500 leading-relaxed mb-4">
+            <p className="text-sm sm:text-base text-gray-500 leading-relaxed mb-3 sm:mb-4">
               I leverage modern technologies like Next.js, TypeScript, and AI APIs to create production-ready solutions
               that solve real-world problems. My approach combines technical expertise with AI-assisted development workflows
               to deliver high-quality software efficiently.
             </p>
-            <p className="text-base text-gray-500 leading-relaxed">
+            <p className="text-sm sm:text-base text-gray-500 leading-relaxed">
               With a focus on clean code, scalable architecture, and user-centric design, I help teams and businesses
               build innovative products that make an impact.
             </p>
@@ -127,7 +127,7 @@ export default function About() {
 
         {/* Expertise Cards */}
         <motion.h3
-          className="text-2xl font-bold text-white text-center mb-12"
+          className="text-xl sm:text-2xl font-bold text-white text-center mb-8 sm:mb-10 lg:mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -137,7 +137,7 @@ export default function About() {
         </motion.h3>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -148,7 +148,7 @@ export default function About() {
             return (
               <motion.div
                 key={index}
-                className="group relative p-8 rounded-xl border border-gray-800/50 bg-gradient-to-br from-gray-900/30 to-gray-950/30 hover:border-gray-700/70 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 h-full"
+                className="group relative p-5 sm:p-6 lg:p-8 rounded-xl border border-gray-800/50 bg-gradient-to-br from-gray-900/30 to-gray-950/30 hover:border-gray-700/70 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 h-full"
                 variants={itemVariants}
                 transition={{ duration: 0.5, ease: "easeOut" }}
                 whileHover={{ y: -6, scale: 1.01 }}
@@ -172,16 +172,16 @@ export default function About() {
 
         {/* Technologies & Tools */}
         <motion.div
-          className="mt-20"
+          className="mt-12 sm:mt-16 lg:mt-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-2xl font-bold text-white text-center mb-8">
+          <h3 className="text-xl sm:text-2xl font-bold text-white text-center mb-6 sm:mb-8">
             Technologies & Tools
           </h3>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
             {[
               "Next.js",
               "TypeScript",

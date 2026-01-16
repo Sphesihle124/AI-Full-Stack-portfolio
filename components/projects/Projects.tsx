@@ -76,7 +76,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a] overflow-hidden">
+    <section id="projects" className="relative py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a] overflow-hidden">
       {/* Subtle background enhancement */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-purple-500/[0.03] rounded-full blur-3xl" />
@@ -85,21 +85,21 @@ export default function Projects() {
 
       <div className="relative max-w-6xl mx-auto">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-12 lg:mb-16"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
           <motion.h2
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4"
             variants={itemVariants}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             Projects
           </motion.h2>
           <motion.p
-            className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
+            className="text-sm sm:text-base lg:text-lg text-gray-400 max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-2"
             variants={itemVariants}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
@@ -108,7 +108,7 @@ export default function Projects() {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -117,7 +117,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              className="group relative p-8 rounded-xl border border-gray-800/50 bg-gradient-to-br from-gray-900/30 to-gray-950/30 hover:border-gray-700/70 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 h-full flex flex-col"
+              className="group relative p-4 sm:p-6 lg:p-8 rounded-xl border border-gray-800/50 bg-gradient-to-br from-gray-900/30 to-gray-950/30 hover:border-gray-700/70 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 h-full flex flex-col"
               variants={itemVariants}
               transition={{ duration: 0.5, ease: "easeOut" }}
               whileHover={{ y: -6, scale: 1.01 }}
@@ -127,7 +127,7 @@ export default function Projects() {
               
               {/* Optional Project Image */}
               {project.image && (
-                <div className="relative mb-6 w-full h-48 sm:h-56 lg:h-64 overflow-hidden rounded-2xl border border-gray-800/60 bg-gray-900/60 shadow-md shadow-black/40 group-hover:border-gray-700/70 group-hover:shadow-xl group-hover:shadow-black/40 transition-all duration-500">
+                <div className="relative mb-4 sm:mb-6 w-full h-40 sm:h-48 lg:h-56 overflow-hidden rounded-xl sm:rounded-2xl border border-gray-800/60 bg-gray-900/60 shadow-md shadow-black/40 group-hover:border-gray-700/70 group-hover:shadow-xl group-hover:shadow-black/40 transition-all duration-500">
                   <Image
                     src={project.image}
                     alt={`${project.name} project screenshot`}
@@ -141,7 +141,7 @@ export default function Projects() {
               )}
               
               {/* Project Title - More Prominent */}
-              <h3 className="relative text-2xl font-bold text-white mb-5 leading-tight group-hover:text-gray-50 transition-colors duration-300">
+              <h3 className="relative text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4 lg:mb-5 leading-tight group-hover:text-gray-50 transition-colors duration-300">
                 {project.name}
               </h3>
               
@@ -181,9 +181,9 @@ export default function Projects() {
               )}
 
               {/* Tech Stack */}
-              <div className="relative mb-6">
-                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Tech Stack</p>
-                <div className="flex flex-wrap gap-2">
+              <div className="relative mb-4 sm:mb-6">
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 sm:mb-3">Tech Stack</p>
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {project.tech.map((tech, techIndex) => (
                     <span
                       key={techIndex}
@@ -196,7 +196,7 @@ export default function Projects() {
               </div>
 
               {/* Action Buttons */}
-              <div className="relative flex gap-3 mt-auto">
+              <div className="relative flex flex-wrap gap-2 sm:gap-3 mt-auto">
                 {project.liveDemo && (
                   <motion.a
                     href={project.liveDemo}
