@@ -26,9 +26,9 @@ const itemVariants = {
 const projects = [
   {
     name: "ClothingDrop E-commerce Platform",
-    problem: "Developers struggle with code quality and debugging efficiency.",
+    problem: "Authentic South African traditional clothing is hard to access due to geographic barriers, limited artisan market reach, and the lack of modern e-commerce convenience—putting cultural craftsmanship and artisan livelihoods at risk.",
     solution:
-      "AI-powered IDE extension that provides real-time code suggestions, error detection, and automated refactoring.",
+      "ClothingDrop is a digital marketplace that connects verified local artisans with customers through a modern e-commerce platform, offering fast delivery, secure payments, and direct support for cultural preservation and sustainable income.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Stripe", "Lucide React"],
     image: "/projects/project-1.png",
     liveDemo: "https://clothingdrop.vercel.app", // Update with your actual URL
