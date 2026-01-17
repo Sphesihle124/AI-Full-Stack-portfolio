@@ -31,7 +31,7 @@ const projects = [
       "ClothingDrop is a digital marketplace that connects verified local artisans with customers through a modern e-commerce platform, offering fast delivery, secure payments, and direct support for cultural preservation and sustainable income.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Stripe", "Lucide React"],
     image: "/projects/project-1.png",
-    liveDemo: "https://clothingdrop.vercel.app", // Update with your actual URL
+    liveDemo: "https://www.youtube.com/@sphesihle-w5v", // Update with your actual URL
     github: "https://github.com/Sphesihle124/clothingdrop", // Update with your actual URL
   },
   {
@@ -69,7 +69,7 @@ const projects = [
       "UniConnect simplifies the process by centralising student data and intelligently guiding and automating applications across multiple universities from a single platform.",
     tech: ["Flutter", "Dart", "TypeScript", "Node.js", "Playwright", "RESTful APIs", "GitHub", "Supabase", "Web Scraping", "Inngest", "PayFast", "PostgreSQL"],
     image: "/projects/crossplatform.png",
-    liveDemo: "https://uniconnect.app", // Update with your actual URL
+    liveDemo: "https://www.youtube.com/@sphesihle-w5v", // Update with your actual URL
     github: "https://github.com/Sphesihle124/uniconnect", // Update with your actual URL
   },
 ];
