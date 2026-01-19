@@ -30,11 +30,11 @@ This repository contains the full code for my portfolio website including layout
 ### Home / Hero Section
 ![Hero Section](./public/screenshorts/hero.png)
 
-### Projects Showcase
-![Projects Section](./public/screenshorts/projects.png)
-
 ### About Section
 ![About Section](./public/screenshorts/about.png)
+
+### Projects Showcase
+![Project Showcase](./public/screenshorts/projects.png)
 
 ## 📌 About Me
 
