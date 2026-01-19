@@ -49,7 +49,7 @@ const projects = [
       "Firebase"
     ],
     image: "/projects/project-2.png",
-    liveDemo: "https://youtu.be/rU24vpS9n0w", // Update with your actual URL
+    liveDemo: "https://youtu.be/KzF3E-tT5Us", // Update with your actual URL
     github: "https://github.com/Sphesihle124/careerdash", // Update with your actual URL
   },
   {
