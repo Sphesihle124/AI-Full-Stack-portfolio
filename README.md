@@ -28,7 +28,7 @@ This repository contains the full code for my portfolio website including layout
 ## 📱 Screenshots
 
 ### Home / Hero Section
-![Hero Section](public/screenshots/hero.png)
+(public/screenshots/hero.png)
 
 ### Projects Showcase
 ![Projects Section](public/screenshots/projects.png)
