@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Mail, ExternalLink, Sparkles } from "lucide-react";
+import { ArrowDown, Mail, ExternalLink } from "lucide-react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -69,7 +69,10 @@ export default function Hero() {
           variants={itemVariants}
           transition={{ duration: 0.5 }}
         >
-          <Sparkles className="w-4 h-4 text-yellow-500" />
+          <span className="relative flex h-3 w-3">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+          </span>
           <span className="text-sm text-gray-300">Available for new projects</span>
         </motion.div>
 
