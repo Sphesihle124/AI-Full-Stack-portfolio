@@ -43,13 +43,13 @@ const projects = [
   {
     name: "CareerDash Web App",
     status: "Live" as const,
-    description: "A comprehensive AI-driven career management platform that provides intelligent insights, personalized recommendations, and automated tools to help professionals advance their careers.",
+    description: "CareerDash is a comprehensive career management platform that helps users create professional CVs, manage their career documents, and optimize their job applications using AI-powered tools.",
     features: [
+      "CV Builder to create professional CVs with multiple templates",
       "AI-powered resume analysis and optimization",
       "Real-time job market insights",
-      "Personalized career path recommendations",
-      "Secure payment integration with PayPal",
-      "Interactive dashboard with analytics"
+      "Secure payment integration with PayPal and PayFast",
+      "Practice with AI-powered interview simulations"
     ],
     tech: [
       "Next.js",
@@ -57,8 +57,10 @@ const projects = [
       "Tailwind CSS",
       "OpenAI",
       "DeepSeek APIs",
-      "Paypal",
-      "Firebase"
+      "PayPal",
+      "PayFast",
+      "Firebase",
+      "Vercel"
     ],
     image: "/projects/project-2.png",
     liveDemo: "https://careerdash.vercel.app/",
@@ -67,13 +69,13 @@ const projects = [
   {
     name: "AI Developer Portfolio Website",
     status: "Live" as const,
-    description: "A modern, high-performance portfolio designed to showcase real-world AI and full-stack development skills through live projects, interactive demos, and a clean, recruiter-focused user experience.",
+    description: "A modern, high-performance portfolio designed to showcase real-world AI and full-stack development skills through live projects, interactive demos, and a clean, recruiter-focused user experience. Built with a strong emphasis on performance, accessibility, and modern UI/UX, the platform demonstrates end-to-end engineering from frontend design and animations to backend logic and AI integration all deployed as a production-ready web application.",
     features: [
-      "Smooth animations with Framer Motion",
-      "Fully responsive design",
-      "SEO optimized for discoverability",
-      "Interactive project showcases",
-      "Modern UI/UX with dark theme"
+      "Responsive, modern UI with Tailwind CSS",
+      "Built with Next.js (App Router) & TypeScript",
+      "Interactive AI components and API integration",
+      "Showcases real projects with live demos",
+      "Deployed on Vercel with fast performance"
     ],
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Shadcn/UI", "Framer Motion", "OpenAI API"],
     image: "/projects/project-4.png",
