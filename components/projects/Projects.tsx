@@ -27,9 +27,14 @@ const projects = [
   {
     name: "BrainBox AI",
     status: "Live" as const,
-    problem: "Authentic South African traditional clothing is hard to access due to geographic barriers, limited artisan market reach, and the lack of modern e-commerce convenience—putting cultural craftsmanship and artisan livelihoods at risk.",
-    solution:
-      "ClothingDrop is a digital marketplace that connects verified local artisans with customers through a modern e-commerce platform, offering fast delivery, secure payments, and direct support for cultural preservation and sustainable income.",
+    description: "An intelligent AI-powered platform that connects local South African artisans with customers through a modern e-commerce marketplace, preserving cultural craftsmanship while providing sustainable income opportunities.",
+    features: [
+      "Secure payment processing with Stripe",
+      "Real-time inventory management",
+      "Artisan verification system",
+      "Fast delivery tracking",
+      "Mobile-responsive design"
+    ],
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Stripe", "Lucide React"],
     image: "/projects/project-1.png",
     liveDemo: "https://brainboxai.vercel.app/",
@@ -38,9 +43,14 @@ const projects = [
   {
     name: "CareerDash Web App",
     status: "Live" as const,
-    problem: "Businesses need actionable insights from complex data streams.",
-    solution:
-      "Real-time dashboard with AI-driven pattern recognition, predictive analytics, and automated reporting.",
+    description: "A comprehensive AI-driven career management platform that provides intelligent insights, personalized recommendations, and automated tools to help professionals advance their careers.",
+    features: [
+      "AI-powered resume analysis and optimization",
+      "Real-time job market insights",
+      "Personalized career path recommendations",
+      "Secure payment integration with PayPal",
+      "Interactive dashboard with analytics"
+    ],
     tech: [
       "Next.js",
       "TypeScript",
@@ -57,9 +67,14 @@ const projects = [
   {
     name: "AI Developer Portfolio Website",
     status: "Live" as const,
-    problem: "Content creators face writer's block and time-consuming research.",
-    solution:
-      "AI-powered platform that generates, optimizes, and personalizes content across multiple formats and channels.",
+    description: "A modern, high-performance portfolio designed to showcase real-world AI and full-stack development skills through live projects, interactive demos, and a clean, recruiter-focused user experience.",
+    features: [
+      "Smooth animations with Framer Motion",
+      "Fully responsive design",
+      "SEO optimized for discoverability",
+      "Interactive project showcases",
+      "Modern UI/UX with dark theme"
+    ],
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Shadcn/UI", "Framer Motion", "OpenAI API"],
     image: "/projects/project-4.png",
     liveDemo: "https://initial-ai-full-stack-portfolio.vercel.app",
@@ -68,9 +83,14 @@ const projects = [
   {
     name: "Uniconnect Crossplatform App",
     status: "In Development" as const,
-    problem: "South African university applications are fragmented and repetitive, requiring students to navigate multiple portals, re-enter the same information, and manage complex, inconsistent requirements.",
-    solution:
-      "UniConnect simplifies the process by centralising student data and intelligently guiding and automating applications across multiple universities from a single platform.",
+    description: "A revolutionary cross-platform mobile application that centralizes and automates South African university applications, eliminating repetitive data entry and simplifying the complex application process.",
+    features: [
+      "Centralized student data management",
+      "Automated form filling across multiple universities",
+      "Real-time application status tracking",
+      "Secure payment processing with PayFast",
+      "Smart application guidance system"
+    ],
     tech: ["Flutter", "Dart", "TypeScript", "Node.js", "Playwright", "RESTful APIs", "GitHub", "Supabase", "Web Scraping", "Inngest", "PayFast", "PostgreSQL"],
     image: "/projects/crossplatform.png",
     liveDemo: "https://www.youtube.com/@sphesihle-w5v",
@@ -167,40 +187,33 @@ export default function Projects() {
                 </div>
               </div>
               
-              {/* Problem / Solution or Description */}
-              {project.name === "AI Developer Portfolio Website" ? (
-                <div className="relative mb-6 flex-grow">
-                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
+              {/* Description and Features */}
+              <div className="relative mb-6 space-y-4 flex-grow">
+                {/* Description */}
+                <div>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
                     Description
                   </p>
                   <p className="text-sm text-gray-300 leading-relaxed">
-                  A modern, high-performance portfolio designed to showcase real-world AI and full-stack development 
-                  skills through live projects, interactive AI demos, and a clean, recruiter-focused user experience. 
-                  Built with a strong emphasis on performance, accessibility, and modern UI/UX, the platform demonstrates end-to-end engineering — from frontend design and animations 
-                  to backend logic and AI integration — all deployed as a production-ready web application. 
-                  The portfolio also highlights an AI-assisted development workflow, demonstrating how modern tools can accelerate delivery without compromising code quality.
+                    {project.description}
                   </p>
                 </div>
-              ) : (
-                <div className="relative mb-6 space-y-3 flex-grow">
-                  <div>
-                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
-                      Problem
-                    </p>
-                    <p className="text-sm text-gray-400 leading-relaxed">
-                      {project.problem}
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
-                      Solution
-                    </p>
-                    <p className="text-sm text-gray-300 leading-relaxed">
-                      {project.solution}
-                    </p>
-                  </div>
+
+                {/* Features */}
+                <div>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                    Key Features
+                  </p>
+                  <ul className="space-y-1.5">
+                    {project.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-start gap-2 text-sm text-gray-400">
+                        <span className="text-blue-400 mt-1">•</span>
+                        <span className="leading-relaxed">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              )}
+              </div>
 
               {/* Tech Stack */}
               <div className="relative mb-4 sm:mb-6">
