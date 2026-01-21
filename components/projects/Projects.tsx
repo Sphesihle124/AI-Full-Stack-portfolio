@@ -69,7 +69,7 @@ const projects = [
   {
     name: "AI Developer Portfolio Website",
     status: "Live" as const,
-    description: "A modern, high-performance portfolio designed to showcase real-world AI and full-stack development skills through live projects, interactive demos, and a clean, recruiter-focused user experience. Built with a strong emphasis on performance, accessibility, and modern UI/UX, the platform demonstrates end-to-end engineering from frontend design and animations to backend logic and AI integration all deployed as a production-ready web application.",
+    description: "A modern, high-performance portfolio designed to showcase real-world AI and full-stack development skills through live projects, interactive demos, and a clean, recruiter-focused user experience.",
     features: [
       "Responsive, modern UI with Tailwind CSS",
       "Built with Next.js (App Router) & TypeScript",
@@ -77,7 +77,7 @@ const projects = [
       "Showcases real projects with live demos",
       "Deployed on Vercel with fast performance"
     ],
-    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Shadcn/UI", "Framer Motion", "OpenAI API"],
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Shadcn/UI", "Framer Motion", "OpenAI API", "Vercel", "Git", "GitHub"],
     image: "/projects/project-4.png",
     liveDemo: "https://initial-ai-full-stack-portfolio.vercel.app",
     github: "https://github.com/Sphesihle124/Initial-AI-Full-Stack-portfolio",
@@ -93,9 +93,9 @@ const projects = [
       "Secure payment processing with PayFast",
       "Smart application guidance system"
     ],
-    tech: ["Flutter", "Dart", "TypeScript", "Node.js", "Playwright", "RESTful APIs", "GitHub", "Supabase", "Web Scraping", "Inngest", "PayFast", "PostgreSQL"],
+    tech: ["Flutter", "Dart", "TypeScript", "Node.js", "Playwright", "RESTful APIs", "GitHub", "Supabase", "Web Scraping", "PayFast", "PostgreSQL"],
     image: "/projects/crossplatform.png",
-    liveDemo: "https://www.youtube.com/@sphesihle-w5v",
+    liveDemo: "https://www.youtube.com/watch?v=qyz52zhPFk8",
     github: "https://github.com/Sphesihle124/uniconnect",
   },
 ];
