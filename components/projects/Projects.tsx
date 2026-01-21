@@ -27,15 +27,15 @@ const projects = [
   {
     name: "BrainBox AI",
     status: "Live" as const,
-    description: "An intelligent AI-powered platform that connects local South African artisans with customers through a modern e-commerce marketplace, preserving cultural craftsmanship while providing sustainable income opportunities.",
+    description: "A cutting-edge AI platform offering three core solutions: AI Caller for automated phone sales and support, Website Voice Agent for voice-powered navigation, and AI Chatbots for multi-platform customer engagement across websites, WhatsApp, Telegram, and Facebook.",
     features: [
-      "Secure payment processing with Stripe",
-      "Real-time inventory management",
-      "Artisan verification system",
-      "Fast delivery tracking",
-      "Mobile-responsive design"
+      "Interactive AI Chat - Real-time conversation with AI agents via ElevenLabs",
+      "3D Animations - WebGL-powered background animations",
+      "Responsive Design - Mobile-first, fully responsive interface",
+      "Modern UI - Gradient effects, glassmorphism, animated borders",
+      "Multi-page Application - Home, About, Solutions pages with smooth navigation"
     ],
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Stripe", "Lucide React"],
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "ElevenLabs Client SDK", "Spline Tools", "WebGL", "Lucide React"],
     image: "/projects/project-1.png",
     liveDemo: "https://brainboxai.vercel.app/",
     demoVideo: "https://github.com/Sphesihle124/clothingdrop",
@@ -43,7 +43,7 @@ const projects = [
   {
     name: "CareerDash Web App",
     status: "Live" as const,
-    description: "CareerDash is a comprehensive career management platform that helps users create professional CVs, manage their career documents, and optimize their job applications using AI-powered tools.",
+    description: "CareerDash is a comprehensive career management platform designed to help users build, organize, and optimize their professional profiles in one centralized system. The platform enables users to create polished, industry-ready CVs, securely manage career-related documents, and streamline the job application process through intelligent, AI-powered assistance.",
     features: [
       "CV Builder to create professional CVs with multiple templates",
       "AI-powered resume analysis and optimization",
