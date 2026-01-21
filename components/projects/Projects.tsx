@@ -26,16 +26,18 @@ const itemVariants = {
 const projects = [
   {
     name: "ClothingDrop E-commerce Platform",
+    status: "In Development" as const,
     problem: "Authentic South African traditional clothing is hard to access due to geographic barriers, limited artisan market reach, and the lack of modern e-commerce convenience—putting cultural craftsmanship and artisan livelihoods at risk.",
     solution:
       "ClothingDrop is a digital marketplace that connects verified local artisans with customers through a modern e-commerce platform, offering fast delivery, secure payments, and direct support for cultural preservation and sustainable income.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Stripe", "Lucide React"],
     image: "/projects/project-1.png",
-    liveDemo: "https://www.youtube.com/@sphesihle-w5v", // Update with your actual URL
-    github: "https://github.com/Sphesihle124/clothingdrop", // Update with your actual URL
+    liveDemo: "https://www.youtube.com/@sphesihle-w5v",
+    github: "https://github.com/Sphesihle124/clothingdrop",
   },
   {
     name: "CareerDash Web App",
+    status: "Live" as const,
     problem: "Businesses need actionable insights from complex data streams.",
     solution:
       "Real-time dashboard with AI-driven pattern recognition, predictive analytics, and automated reporting.",
@@ -49,28 +51,30 @@ const projects = [
       "Firebase"
     ],
     image: "/projects/project-2.png",
-    liveDemo: "https://youtu.be/KzF3E-tT5Us", // Update with your actual URL
-    github: "https://github.com/Sphesihle124/careerdash", // Update with your actual URL
+    liveDemo: "https://youtu.be/KzF3E-tT5Us",
+    github: "https://github.com/Sphesihle124/careerdash",
   },
   {
     name: "AI Developer Portfolio Website",
+    status: "Live" as const,
     problem: "Content creators face writer's block and time-consuming research.",
     solution:
       "AI-powered platform that generates, optimizes, and personalizes content across multiple formats and channels.",
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Shadcn/UI", "Framer Motion", "OpenAI API"],
     image: "/projects/project-4.png",
-    liveDemo: "https://initial-ai-full-stack-portfolio.vercel.app", // Current portfolio URL
-    github: "https://github.com/Sphesihle124/Initial-AI-Full-Stack-portfolio", // Current portfolio repo
+    liveDemo: "https://initial-ai-full-stack-portfolio.vercel.app",
+    github: "https://github.com/Sphesihle124/Initial-AI-Full-Stack-portfolio",
   },
   {
     name: "Uniconnect Crossplatform App",
+    status: "In Development" as const,
     problem: "South African university applications are fragmented and repetitive, requiring students to navigate multiple portals, re-enter the same information, and manage complex, inconsistent requirements.",
     solution:
       "UniConnect simplifies the process by centralising student data and intelligently guiding and automating applications across multiple universities from a single platform.",
     tech: ["Flutter", "Dart", "TypeScript", "Node.js", "Playwright", "RESTful APIs", "GitHub", "Supabase", "Web Scraping", "Inngest", "PayFast", "PostgreSQL"],
     image: "/projects/crossplatform.png",
-    liveDemo: "https://www.youtube.com/@sphesihle-w5v", // Update with your actual URL
-    github: "https://github.com/Sphesihle124/uniconnect", // Update with your actual URL
+    liveDemo: "https://www.youtube.com/@sphesihle-w5v",
+    github: "https://github.com/Sphesihle124/uniconnect",
   },
 ];
 
@@ -140,10 +144,28 @@ export default function Projects() {
                 </div>
               )}
               
-              {/* Project Title - More Prominent */}
-              <h3 className="relative text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4 lg:mb-5 leading-tight group-hover:text-gray-50 transition-colors duration-300">
-                {project.name}
-              </h3>
+              {/* Project Title with Status Badge */}
+              <div className="relative mb-3 sm:mb-4 lg:mb-5">
+                <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2">
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white leading-tight group-hover:text-gray-50 transition-colors duration-300">
+                    {project.name}
+                  </h3>
+                  <span
+                    className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold border ${
+                      project.status === "Live"
+                        ? "bg-green-500/10 text-green-400 border-green-500/30"
+                        : "bg-amber-500/10 text-amber-400 border-amber-500/30"
+                    }`}
+                  >
+                    <span
+                      className={`w-1.5 h-1.5 rounded-full ${
+                        project.status === "Live" ? "bg-green-500" : "bg-amber-500"
+                      } ${project.status === "Live" ? "animate-pulse" : ""}`}
+                    />
+                    {project.status}
+                  </span>
+                </div>
+              </div>
               
               {/* Problem / Solution or Description */}
               {project.name === "AI Developer Portfolio Website" ? (
@@ -207,7 +229,7 @@ export default function Projects() {
                     whileTap={{ scale: 0.97 }}
                   >
                     <ExternalLink className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-0.5" />
-                    Live Demo
+                    {project.status === "In Development" ? "WIP Preview" : "Live Site"}
                   </motion.a>
                 )}
                 {project.github && (

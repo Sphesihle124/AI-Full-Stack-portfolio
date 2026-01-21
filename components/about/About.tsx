@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code, Smartphone, Brain, Zap } from "lucide-react";
+import { Code, Smartphone, Brain, Zap, Cloud, Workflow } from "lucide-react";
 import Image from "next/image";
 
 const containerVariants = {
@@ -51,6 +51,16 @@ const features = [
     icon: Zap,
     title: "AI Integration",
     description: "Integrating AI capabilities into applications to deliver intelligent, data-driven user experiences.",
+  },
+  {
+    icon: Cloud,
+    title: "Cloud & DevOps",
+    description: "Deploying and managing scalable cloud infrastructure with AWS, Docker, and modern CI/CD pipelines.",
+  },
+  {
+    icon: Workflow,
+    title: "API Development",
+    description: "Designing and building robust RESTful and GraphQL APIs with authentication, validation, and documentation.",
   },
 ];
 
@@ -137,7 +147,7 @@ export default function About() {
         </motion.h3>
 
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -148,23 +158,27 @@ export default function About() {
             return (
               <motion.div
                 key={index}
-                className="group relative p-5 sm:p-6 lg:p-8 rounded-xl border border-gray-800/50 bg-gradient-to-br from-gray-900/30 to-gray-950/30 hover:border-gray-700/70 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 h-full"
+                className="group relative p-5 sm:p-6 rounded-xl border border-gray-800/50 bg-gradient-to-br from-gray-900/40 to-gray-950/40 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 h-full flex flex-col"
                 variants={itemVariants}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                whileHover={{ y: -6, scale: 1.01 }}
+                whileHover={{ y: -8, scale: 1.02 }}
               >
-                {/* Subtle glow effect on hover */}
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                {/* Animated gradient border glow on hover */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 
                 <motion.div
-                  className="relative inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/20 mb-5 group-hover:border-blue-500/40 group-hover:bg-gradient-to-br group-hover:from-blue-500/15 group-hover:to-purple-500/15 transition-all duration-300"
+                  className="relative inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-blue-500/15 to-purple-500/15 border border-blue-500/30 mb-4 sm:mb-5 group-hover:border-blue-400/50 group-hover:from-blue-500/25 group-hover:to-purple-500/25 group-hover:scale-110 transition-all duration-300"
                   variants={iconVariants}
                   transition={{ duration: 0.4, ease: "easeOut" }}
                 >
-                  <Icon className="w-7 h-7 text-blue-400 group-hover:text-blue-300 transition-colors duration-300" />
+                  <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-blue-400 group-hover:text-blue-300 transition-colors duration-300" />
                 </motion.div>
-                <h3 className="relative text-xl font-semibold text-white mb-3 leading-tight">{feature.title}</h3>
-                <p className="relative text-gray-400 leading-relaxed text-[15px]">{feature.description}</p>
+                <h3 className="relative text-lg sm:text-xl font-bold text-white mb-2.5 sm:mb-3 leading-tight group-hover:text-blue-50 transition-colors duration-300">
+                  {feature.title}
+                </h3>
+                <p className="relative text-gray-400 leading-relaxed text-sm sm:text-[15px] group-hover:text-gray-300 transition-colors duration-300">
+                  {feature.description}
+                </p>
               </motion.div>
             );
           })}
