@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Video } from "lucide-react";
 import Image from "next/image";
 
 const containerVariants = {
@@ -33,7 +33,7 @@ const projects = [
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Stripe", "Lucide React"],
     image: "/projects/project-1.png",
     liveDemo: "https://brainboxai.vercel.app/",
-    github: "https://github.com/Sphesihle124/clothingdrop",
+    demoVideo: "https://github.com/Sphesihle124/clothingdrop",
   },
   {
     name: "CareerDash Web App",
@@ -51,8 +51,8 @@ const projects = [
       "Firebase"
     ],
     image: "/projects/project-2.png",
-    liveDemo: "https://youtu.be/KzF3E-tT5Us",
-    github: "https://github.com/Sphesihle124/careerdash",
+    liveDemo: "https://careerdash.vercel.app/",
+    demoVideo: "https://youtu.be/KzF3E-tT5Us",
   },
   {
     name: "AI Developer Portfolio Website",
@@ -224,12 +224,29 @@ export default function Projects() {
                     href={project.liveDemo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group/btn flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-gray-700/50 rounded-xl transition-all duration-300 hover:border-gray-600/50 hover:shadow-md hover:shadow-white/10"
+                    className={`group/btn flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white border rounded-xl transition-all duration-300 hover:shadow-md ${
+                      project.status === "Live"
+                        ? "bg-green-600/20 hover:bg-green-600/30 border-green-500/50 hover:border-green-500/70 hover:shadow-green-500/20"
+                        : "bg-white/10 hover:bg-white/20 border-gray-700/50 hover:border-gray-600/50 hover:shadow-white/10"
+                    }`}
                     whileHover={{ scale: 1.03, y: -1 }}
                     whileTap={{ scale: 0.97 }}
                   >
                     <ExternalLink className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-0.5" />
                     {project.status === "In Development" ? "WIP Preview" : "Live Site"}
+                  </motion.a>
+                )}
+                {project.demoVideo && (
+                  <motion.a
+                    href={project.demoVideo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/btn flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-gray-300 bg-gray-900/50 hover:bg-gray-800/60 border border-gray-700/50 rounded-xl transition-all duration-300 hover:border-gray-600/50 hover:shadow-md hover:shadow-gray-900/50"
+                    whileHover={{ scale: 1.03, y: -1 }}
+                    whileTap={{ scale: 0.97 }}
+                  >
+                    <Video className="w-4 h-4 transition-transform duration-300 group-hover/btn:scale-110" />
+                    Demo Video
                   </motion.a>
                 )}
                 {project.github && (
