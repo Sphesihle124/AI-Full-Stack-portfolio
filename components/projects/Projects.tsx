@@ -25,14 +25,14 @@ const itemVariants = {
 
 const projects = [
   {
-    name: "ClothingDrop E-commerce Platform",
+    name: "BrainBox AI",
     status: "Live" as const,
     problem: "Authentic South African traditional clothing is hard to access due to geographic barriers, limited artisan market reach, and the lack of modern e-commerce convenience—putting cultural craftsmanship and artisan livelihoods at risk.",
     solution:
       "ClothingDrop is a digital marketplace that connects verified local artisans with customers through a modern e-commerce platform, offering fast delivery, secure payments, and direct support for cultural preservation and sustainable income.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Stripe", "Lucide React"],
     image: "/projects/project-1.png",
-    liveDemo: "https://www.youtube.com/@sphesihle-w5v",
+    liveDemo: "https://brainboxai.vercel.app/",
     github: "https://github.com/Sphesihle124/clothingdrop",
   },
   {
