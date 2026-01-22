@@ -121,16 +121,15 @@ export default function About() {
               Sphesihle Mlanzi
             </h3>
             <p className="text-base sm:text-lg text-gray-400 leading-relaxed mb-3 sm:mb-4">
-              AI & Full-Stack Developer based in Johannesburg South Africa, specializing in building intelligent, scalable web and mobile applications.
+            I am an AI Full-Stack Developer based in Johannesburg, South Africa, focused on building intelligent, scalable web and mobile applications using modern technologies and AI-assisted development workflows.
             </p>
             <p className="text-sm sm:text-base text-gray-500 leading-relaxed mb-3 sm:mb-4">
-              I leverage modern technologies like Next.js, TypeScript, and AI APIs to create production-ready solutions
-              that solve real-world problems. My approach combines technical expertise with AI-assisted development workflows
-              to deliver high-quality software efficiently.
+            With a background in graphic design and 3D artistry, I bring a strong eye for user experience and visual clarity into software engineering. This creative foundation, combined with hands-on full-stack development, allows me to design and ship production-ready systems that are both technically robust and user-centric.
+
+I leverage technologies such as Next.js, TypeScript, modern frontend frameworks, and AI APIs to build end-to-end solutions — from clean, responsive interfaces to scalable backend logic and AI-powered features. I have collaborated on real-world projects including CareerDash and BrainBox AI, gaining practical experience across the full development lifecycle, including development, testing, and deployment.
             </p>
             <p className="text-sm sm:text-base text-gray-500 leading-relaxed">
-              With a focus on clean code, scalable architecture, and user-centric design, I help teams and businesses
-              build innovative products that make an impact.
+            My approach emphasizes clean code, scalable architecture, performance, and practical AI integration. I am highly adaptable, continuously learning, and driven by building impactful digital products that solve real-world problems.
             </p>
           </div>
         </motion.div>
