@@ -25,22 +25,6 @@ const itemVariants = {
 
 const projects = [
   {
-    name: "BrainBox AI",
-    status: "Live" as const,
-    description: "A cutting-edge AI platform offering three core solutions: AI Caller for automated phone sales and support, Website Voice Agent for voice-powered navigation, and AI Chatbots for multi-platform customer engagement across websites, WhatsApp, Telegram, and Facebook.",
-    features: [
-      "Interactive AI Chat - Real-time conversation with AI agents via ElevenLabs",
-      "3D Animations - WebGL-powered background animations",
-      "Responsive Design - Mobile-first, fully responsive interface",
-      "Modern UI - Gradient effects, glassmorphism, animated borders",
-      "Multi-page Application - Home, About, Solutions pages with smooth navigation"
-    ],
-    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "ElevenLabs Client SDK", "Spline Tools", "WebGL", "Lucide React"],
-    image: "/projects/project-1.png",
-    liveDemo: "https://brainboxai.vercel.app/",
-    demoVideo: "https://github.com/Sphesihle124/clothingdrop",
-  },
-  {
     name: "CareerDash Web App",
     status: "Live" as const,
     description: "CareerDash is a comprehensive career management platform designed to help users build, organize, and optimize their professional profiles in one centralized system. The platform enables users to create polished, industry-ready CVs, securely manage career-related documents, and streamline the job application process through intelligent, AI-powered assistance.",
@@ -65,6 +49,22 @@ const projects = [
     image: "/projects/project-2.png",
     liveDemo: "https://careerdash.vercel.app/",
     demoVideo: "https://youtu.be/KzF3E-tT5Us",
+  },
+  {
+    name: "BrainBox AI",
+    status: "Live" as const,
+    description: "A cutting-edge AI platform offering three core solutions: AI Caller for automated phone sales and support, Website Voice Agent for voice-powered navigation, and AI Chatbots for multi-platform customer engagement across websites, WhatsApp, Telegram, and Facebook.",
+    features: [
+      "Interactive AI Chat - Real-time conversation with AI agents via ElevenLabs",
+      "3D Animations - WebGL-powered background animations",
+      "Responsive Design - Mobile-first, fully responsive interface",
+      "Modern UI - Gradient effects, glassmorphism, animated borders",
+      "Multi-page Application - Home, About, Solutions pages with smooth navigation"
+    ],
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "ElevenLabs Client SDK", "Spline Tools", "WebGL", "Lucide React"],
+    image: "/projects/project-1.png",
+    liveDemo: "https://brainboxai.vercel.app/",
+    demoVideo: "https://github.com/Sphesihle124/clothingdrop",
   },
   {
     name: "AI Developer Portfolio Website",
