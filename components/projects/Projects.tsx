@@ -43,6 +43,8 @@ const projects = [
       "DeepSeek APIs",
       "PayPal",
       "PayFast",
+      "Git",
+      "GitHub",
       "Firebase",
       "Vercel"
     ],
@@ -61,7 +63,7 @@ const projects = [
       "Modern UI - Gradient effects, glassmorphism, animated borders",
       "Multi-page Application - Home, About, Solutions pages with smooth navigation"
     ],
-    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "ElevenLabs Client SDK", "Spline Tools", "WebGL", "Lucide React"],
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "ElevenLabs Client SDK", "Spline Tools", "WebGL", "Lucide React", "Git", "GitHub"],
     image: "/projects/project-1.png",
     liveDemo: "https://brainboxai.vercel.app/",
     demoVideo: "https://github.com/Sphesihle124/clothingdrop",
