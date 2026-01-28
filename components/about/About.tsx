@@ -55,7 +55,7 @@ const features = [
   {
     icon: Cloud,
     title: "Cloud & DevOps",
-    description: "Deploying and managing scalable cloud infrastructure with AWS, Docker, and modern CI/CD pipelines.",
+    description: "Deploying and managing scalable cloud infrastructure with Vercel, AWS, Docker, and modern CI/CD pipelines.",
   },
   {
     icon: Workflow,
