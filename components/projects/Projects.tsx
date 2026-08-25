@@ -48,7 +48,7 @@ const projects = [
       "Firebase",
       "Vercel"
     ],
-    image: "/projects/project-2.png",
+    image: "/projects/project-2.1.png",
     liveDemo: "https://careerdash.vercel.app/",
     demoVideo: "https://youtu.be/KzF3E-tT5Us",
   },
@@ -152,7 +152,7 @@ export default function Projects() {
             >
               {/* Subtle glow effect on hover */}
               <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-              
+
               {/* Optional Project Image */}
               {project.image && (
                 <div className="relative mb-4 sm:mb-6 w-full h-40 sm:h-48 lg:h-56 overflow-hidden rounded-xl sm:rounded-2xl border border-gray-800/60 bg-gray-900/60 shadow-md shadow-black/40 group-hover:border-gray-700/70 group-hover:shadow-xl group-hover:shadow-black/40 transition-all duration-500">
@@ -167,7 +167,7 @@ export default function Projects() {
                   />
                 </div>
               )}
-              
+
               {/* Project Title with Status Badge */}
               <div className="relative mb-3 sm:mb-4 lg:mb-5">
                 <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2">
@@ -175,22 +175,20 @@ export default function Projects() {
                     {project.name}
                   </h3>
                   <span
-                    className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold border ${
-                      project.status === "Live"
-                        ? "bg-green-500/10 text-green-400 border-green-500/30"
-                        : "bg-amber-500/10 text-amber-400 border-amber-500/30"
-                    }`}
+                    className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold border ${project.status === "Live"
+                      ? "bg-green-500/10 text-green-400 border-green-500/30"
+                      : "bg-amber-500/10 text-amber-400 border-amber-500/30"
+                      }`}
                   >
                     <span
-                      className={`w-1.5 h-1.5 rounded-full ${
-                        project.status === "Live" ? "bg-green-500" : "bg-amber-500"
-                      } ${project.status === "Live" ? "animate-pulse" : ""}`}
+                      className={`w-1.5 h-1.5 rounded-full ${project.status === "Live" ? "bg-green-500" : "bg-amber-500"
+                        } ${project.status === "Live" ? "animate-pulse" : ""}`}
                     />
                     {project.status}
                   </span>
                 </div>
               </div>
-              
+
               {/* Description and Features */}
               <div className="relative mb-6 space-y-4 flex-grow">
                 {/* Description */}
@@ -241,11 +239,10 @@ export default function Projects() {
                     href={project.liveDemo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`group/btn flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white border rounded-xl transition-all duration-300 hover:shadow-md ${
-                      project.status === "Live"
-                        ? "bg-green-600/20 hover:bg-green-600/30 border-green-500/50 hover:border-green-500/70 hover:shadow-green-500/20"
-                        : "bg-white/10 hover:bg-white/20 border-gray-700/50 hover:border-gray-600/50 hover:shadow-white/10"
-                    }`}
+                    className={`group/btn flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white border rounded-xl transition-all duration-300 hover:shadow-md ${project.status === "Live"
+                      ? "bg-green-600/20 hover:bg-green-600/30 border-green-500/50 hover:border-green-500/70 hover:shadow-green-500/20"
+                      : "bg-white/10 hover:bg-white/20 border-gray-700/50 hover:border-gray-600/50 hover:shadow-white/10"
+                      }`}
                     whileHover={{ scale: 1.03, y: -1 }}
                     whileTap={{ scale: 0.97 }}
                   >
